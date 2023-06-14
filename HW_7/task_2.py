@@ -16,4 +16,11 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows+1):
+        result = []
+        for j in range(1, num_columns+1):
+            result.append(operation(i,j))
+        print(''.join(f'{e:<4}' for e in result))
+print_operation_table(lambda x, y: x*y)
 
