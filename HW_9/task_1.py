@@ -7,7 +7,7 @@
 
 
 import pandas as pd
-df = pd.read_csv("sample_data/california_housing_test.csv")
+df = pd.read_csv("sample_data/california_housing_train.csv")
 print(f"Средняя стоимость дома с численностью населения меньше 500 человек = {df[df['population']<=500]['median_house_value'].mean()}")
 minpop = df['population'].min()
 print(f"В зоне с наименьшей численностью населения, максимальное число жильцов в доме = {df[df['population']==minpop]['households'].max()}")
